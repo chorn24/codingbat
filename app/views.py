@@ -29,7 +29,7 @@ def catdog(request:HttpRequest,cd) -> HttpResponse:
     if count1 == count2:
         return HttpResponse(True)
     else:
-        return HttpResponse(False   )
+        return HttpResponse(False)
 
 def lone(request:HttpRequest,a,b,c) -> HttpResponse:
     sum = 0;
