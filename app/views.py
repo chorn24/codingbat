@@ -5,17 +5,17 @@ from django.http.request import HttpRequest
 
 # Create your views here.
 
-def near_hundred(request:HttpRequest,n) -> HttpResponse:
+def near_hundred(request:HttpRequest,n:int) -> HttpResponse:
     return HttpResponse(abs(n) < 100 and abs(n) >= 90 or abs(n) < 200 and abs(n) >= 190)
 
-def stringsplode(request:HttpRequest,s) -> HttpResponse:
+def stringsplode(request:HttpRequest,s:str) -> HttpResponse:
     result = ""
                                                    
     for i in range(len(s)):
         result = result + s[:i + 1]
     return HttpResponse(result)
 
-def catdog(request:HttpRequest,cd) -> HttpResponse:
+def catdog(request:HttpRequest,cd:str) -> HttpResponse:
     count1 = 0
     count2 = 0
    
@@ -31,7 +31,7 @@ def catdog(request:HttpRequest,cd) -> HttpResponse:
     else:
         return HttpResponse(False)
 
-def lone(request:HttpRequest,a,b,c) -> HttpResponse:
+def lone(request:HttpRequest,a:int,b:int,c:int) -> HttpResponse:
     sum = 0;
     if(a != b and a != c):
         sum += a;       
